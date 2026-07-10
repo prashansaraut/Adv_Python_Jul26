@@ -1,6 +1,6 @@
 
 import datetime
-class SimpleMeta():
+class SimpleMeta(type):
     def __new__(cls,name,bases,attrs):
         print(f"Creating classes: {name}")
         print(f"Base classes: {bases}")
@@ -11,12 +11,12 @@ class SimpleMeta():
 
         return super().__new__(cls,name,bases,attrs)
     
-class MyClass(metaClass=SimpleMeta):
+class MyClass(metaclass=SimpleMeta):
     x = 10
 
     def method(self):
         return "Hello"
-    
+
 print(MyClass.x)
 print(MyClass.created_at)
 print(MyClass.created_by)
