@@ -26,10 +26,3 @@ print(repr(book1))
 #print(book1 == book3)
 # __getitem__ : indexing access
 # __call__ : make object callable
-
-
-
-
-
-
-        
